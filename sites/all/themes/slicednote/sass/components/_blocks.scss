@@ -1,0 +1,411 @@
+
+
+.block--user-login,
+.view-list-bookings .views-row,
+.view-blog-list .view-content,
+.l-region--sidebar-second .block,
+.side-block,
+.block--panels-mini-home-panels .block--views-releases-block,
+.block--box,
+.red-box
+{
+  @include block();
+}
+
+.block--box {
+  padding: .5em 1em;
+}
+.l-region--sidebar-first .block--box,
+.block--gallery-index .block--box,
+.view-id-gig_list .block--box,
+.block--box.homebox,
+.red-box {
+  padding: 0;
+}
+
+.block--panels-mini-left-column-blocks {
+  .view-content {
+    @include breakpoint($tablet) {
+      font-size: $font--size-small;
+      line-height: 1.25em;
+    }
+  }
+}
+
+.block--panels-mini-home-panels h2 {
+  @include box-header($block--heading-padding);
+  margin:0;
+  @include head-font();
+}
+
+/* Releases Blocks */
+.section-releases {
+  .block--views-releases-block {
+    .node--releases--teaser {
+      padding: $block--padding;
+    }
+  }
+}
+
+
+.block--views-releases-block .views-row {
+  .field-label,
+  .field--release-date {
+    font-size: $font--size-smaller;
+  }
+  h3 {
+    margin:0 0 0.5em 0;
+  }
+}
+
+
+.view-list-bookings .views-row {
+  .field-label,
+  .field--event-date {
+    padding: $block--horizontal-padding;
+  }
+}
+
+
+
+.right-column-flyer {
+  margin-bottom: $block--bottom-margin;
+  img {
+    border:1px solid $block--border-color;
+  }
+}
+
+.block--search {
+  margin-bottom:0;
+  @include breakpoint($tablet) {
+    margin-bottom: $block--bottom-margin;
+  }
+
+}
+
+.views-column {
+  border: 1px solid grey;
+  margin-bottom: 2em;
+}
+
+.views-responsive-grid .views-row {
+  .views-column {
+
+    border:1px solid $block--border-color;
+    margin-bottom:2em;
+    text-align: center;
+    min-height: 30px;
+    font-size: $font--size-small;
+    padding:.25em 0 0 0;
+    font-family : $body--font-two;
+    //@include gallery(6 of 12);
+
+    .views-field-title {
+      padding:0 .25em;
+      line-height:110%;
+      min-height:30px;
+    }
+
+    .field--interview {
+      padding:0 .25em .25em;
+        a {
+          color: #48a9e4;
+            &:hover {
+              color:white;
+            }
+        }
+    }
+
+    img {
+      max-width: 100%;
+      display:block;
+    }
+  }
+}
+
+
+@include breakpoint($desktop) {
+  .views-responsive-grid .views-row {
+    .views-column {
+      @include gallery(3 of 12);
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+  .block--gallery {
+    .view-content {
+      .views-row {
+        @include breakpoint($tablet) {
+          @include gallery(3 of 12);
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .block--view-galleries {
+    border:none;
+    .block__content {
+      padding:0;
+    }
+    .block--inner {
+      padding:0;
+        p {
+          margin:0;
+           a {
+             @include button();
+             width:100%;
+             text-align: center;
+           }
+        }
+    }
+  }
+
+
+      /* Ladies of DNB */
+      .node--ladies-of-dnb {
+        .field--profile-image {
+          display:block;
+          margin:0 1em 1em;
+          border:none;
+          max-width: 100%;
+        }
+
+        @include breakpoint($desktop) {
+          .field--profile-image {
+            display: inline-block;
+            float: left;
+            margin: .5em .5em .25em 0;
+            border:1px solid $block--border-color;
+          }
+        }
+      }
+
+      .block--panels-mini-home-panels .view,
+      .block--inner {
+        padding: $block--padding;
+      }
+
+      /* Neutralize block paddings */
+      .block--views-column-flyers-block .block--inner,
+      .l-region--sidebar-second .view-column-flyers .view-content,
+      .block--views-releases-block .block--inner,
+      .block--views-list-bookings-block .block--inner {
+        padding:0;
+      }
+
+
+
+      .views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
+        width: 100% !important;
+      }
+      .block--views-slider-block {
+        .inner {
+          padding:0;
+        }
+      }
+
+      /* Block Bookings */
+      .block--views-list-bookings-block {
+        font-size: $font--size-small;
+        .views-row {
+          padding:.25em;
+          margin: 0 0 1px;
+        }
+        .field--event-date {
+          padding:0;
+          display:inline-block;
+          margin-right:1em;
+          border-right: 1px solid black;
+          min-width: 28%;
+        }
+      }
+
+      .button--soundcloud a,
+      .button--twitter a,
+      .button--facebook a {
+        @include button();
+        margin-bottom:1em;
+        min-width: 180px;
+        border:1px solid block--border-color;
+        &:hover {
+          @include gradient(#29363F, #444);
+          transition-property: background;
+          transition-duration: .5s;
+        }
+      }
+
+
+      .grid--wrapper .view-content {
+        @include container();
+        ul {
+          list-style:none;
+          padding:0;
+          margin:0;
+        }
+        .grid--block,
+        .views-row,
+        li {
+          text-align: center;
+          width:100%;
+          display: block;
+          margin-bottom: $block--bottom-margin;
+          border:1px solid $block--grid--border-color;
+          padding:0;
+
+          @include breakpoint($tablet) {
+            @include gallery(4);
+          }
+          @include breakpoint($desktop) {
+            @include gallery(3);
+          }
+          .field--title {
+            padding:.25em;
+            @include breakpoint($tablet) {
+              min-height:4em;
+            }
+
+            h3 {
+              font-size:1em;
+              margin:0;
+              font-family: $block--heading-font;
+              a {
+                color: #fff;
+                &:hover {
+                }
+              }
+            }
+            .field--interview {
+
+            }
+          }
+        }
+      }
+
+      .block--header--social-icon {
+        @include breakpoint($tablet) {
+          text-align: right;
+          @include container();
+        }
+
+        .block--inner div {
+          padding: 0 .75em;
+          display:inline-block;
+
+          @include breakpoint($tablet) {
+            float:right;
+            padding: 0 0 0 1.75em;
+            text-align: right;
+          }
+        }
+          img {
+            max-width: 30px;
+          }
+      }
+
+      .view-id-gig_list {
+        h4.field-content {
+          margin:.5em;
+        }
+        .field--event-date,
+        .field--link {
+          margin:.5em;
+        }
+        .field--link {
+          a {
+            font-size:.8em;
+            color: $grey;
+          }
+        }
+      }
+
+.styled-table {
+  font-size:.8em;
+  @include breakpoint($tablet) {
+    font-size:1em;
+  }
+  border-top:1px solid $block--border-color;
+  tr {
+
+
+    td.heading {
+      text-align:center;
+      font-weight:bold;
+      @include defaultGradient();
+    }
+
+    td {
+      padding:.25em;
+      border:1px solid $block--border-color;
+      border-top:none;
+    }
+  }
+
+}
+.homeboxes {
+  .view-content {
+    padding:0;
+    @include breakpoint($tablet) {
+      @include container();
+        .views-row {
+          @include gallery(6);
+        }
+    }
+    .node--home-box {
+      @extend .block--box;
+      padding:0;
+        .field--body {
+          padding:0 1em;
+        }
+      .field--link-to {
+        padding: 0 1em 1em;
+          a {
+            @extend .button;
+          }
+      }
+    }
+
+  }
+}
+
+.node--press-articles {
+  .field--article-image {
+    max-height: 100px;
+    overflow:hidden;
+  }
+}
+
+.pane-slider {
+  margin-bottom:2em;
+}
+
+.red-content-box {
+  border:1px solid $block--border-color;
+  margin-bottom:1em;
+    h2 {
+      @include defaultGradient();
+      margin:0;
+      padding:.5em;
+      font-size:1.1em;
+    }
+  p {
+    margin:1em;
+  }
+}
+
+.field--track-image img {
+  margin-bottom: $block--bottom-margin;
+}
+
+.views-row.bordered {
+  border:1px solid $block--border-color;
+  padding: 0 .5em .5em;
+  margin-bottom: $block--bottom-margin;
+}
+

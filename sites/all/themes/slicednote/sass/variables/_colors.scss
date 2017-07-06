@@ -1,0 +1,50 @@
+$black: #000;
+$dark-grey: #333;
+$grey: #666;
+$light-grey: #999;
+$lighter-grey: #ccc;
+$white: #fff;
+$blue: #48a9e4;
+$theme-color: purple;
+$theme-color-two: #29363F;
+$dark-red:#900;
+$darker-red:#600;
+
+$body--background-color: $black;
+$body--font-color: #fff;
+$body--link-color: $blue;
+$body--link-color-hover: $white;
+
+$header--bgcolor: $theme-color-two;
+
+$nav--main--bgcolor: #000;
+$nav--main--color: $white;
+$nav--side--bgcolor: #29363F;
+$nav--side--bgcolor-hover: #333;
+$nav--side--color: $lighter-grey;
+
+$link--column-link-color: $black;
+$link--column-link-color-hover: $black;
+
+$button--text-color: $white;
+$button--bgcolor: $theme-color-two;
+$button--border-color: #900;
+
+
+$content--text-color: $white;
+
+$block--grid--border-color:#666;
+$block--border-color: #600;
+$block--text-color: #fff;
+$block--heading-bgcolor: transparent;
+$block--heading-text-color: $white;
+$block--bgcolor: #222;
+
+$footer--bgcolor: #000;
+$footer--text-color: $white;
+
+$input--border-color: #900;
+$input--text-color: #fff;
+$input--background-colour: #333;
+$fieldset--border-color: $input--border-color;
+

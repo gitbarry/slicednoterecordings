@@ -1,0 +1,12 @@
+.block--search {
+  input[type='submit'] {
+    @include button();
+  }
+  input[type='text'] {
+    padding: .25em .5em;
+    @include border-radius(5px);
+    border:1px solid $input--border-color;
+    background: $input--background-colour;
+    color: $input--text-color;
+  }
+}

@@ -1,0 +1,176 @@
+@mixin menu() {
+  ul.menu {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li.leaf {
+      display:inline-block;
+      margin: $nav--main-margin;
+      a {
+        display:block;
+        padding:$nav--main--padding;
+        margin:$nav--main-margin;
+        //@include gradient($nav--main--bgcolor, #101A26);
+        color: $nav--main--color;
+        font-size: $nav--main-text-size;
+        font-family: "Michroma", arial, helvetica, sans-serif;
+          &:hover {
+            //@include gradient($nav--main--bgcolor, #29363F);
+          }
+      }
+    }
+    li.last.leaf a {
+      margin-right:0;
+    }
+  }
+}
+
+@mixin sideMenu() {
+  ul.menu {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li.leaf {
+      display:block;
+      margin: 0 0 1px 0;
+      a {
+        display:block;
+        padding:$nav--side--padding;
+        background: $nav--side--bgcolor;
+        color: $nav--side--color;
+        font-size: $nav--side-text-size;
+        border-top:1px solid $black;
+        border-bottom:1px solid $dark-grey;
+        margin:0;
+        &:hover {
+          background: $nav--side--bgcolor-hover;
+        }
+      }
+    }
+  }
+}
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin homebox() {
+  .homebox {
+    @include box-style();
+    @include border-radius("5px");
+    margin-bottom: $block--bottom-margin;
+    padding: 0 0 1em;
+
+    h2 {
+      @include box-header($block--heading-padding);
+    }
+
+    .field--date,
+    .field--body,
+    .field--node-link {
+      padding: 0 1em;
+    }
+  }
+}
+
+
+@mixin button() {
+  display: inline-block;
+  color: $button--text-color;
+  background: $button--bgcolor;
+  border: 1px solid $button--border-color;
+  padding: $button--padding;
+  @include border-radius(5px);
+  @include gradient($black, $dark-grey);
+    &:hover {
+      @include gradient($dark-grey, $black);
+    }
+}
+
+@mixin box-style() {
+  @include border-radius($block--border-radius);
+  border: 1px solid $block--border-color;
+  @include gradient(#222, #666);
+}
+
+@mixin box-header($padding) {
+  -webkit-border-top-left-radius: $block--border-radius;
+  -webkit-border-top-right-radius: $block--border-radius;
+  -moz-border-radius-topleft: $block--border-radius;
+  -moz-border-radius-topright: $block--border-radius;
+  border-top-left-radius: $block--border-radius;
+  border-top-right-radius: $block--border-radius;
+  border-bottom:1px solid black;
+  background: $block--heading-bgcolor;
+  color: $block--heading-text-color;
+  margin: $block--heading-margin;
+  padding: $padding;
+  font-weight: $block--heading-font-weight;
+}
+
+@mixin gradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='#68a8c1',GradientType=0 ); /* IE6-9 */
+
+}
+
+@mixin my-text-shadow($color, $blur, $offset){
+  $default-text-shadow-color: rgba($color, 1);
+  $default-text-shadow-blur: $blur;
+  $default-text-shadow-v-offset: $offset;
+  @include single-text-shadow;
+}
+
+@mixin block() {
+  border:1px solid $block--border-color;
+  background-color: $block--bgcolor;
+  margin: $block--margin;
+  padding: 0;
+  //@include border-radius(5px);
+  h2.block__title,
+  h2.pane-title,
+  .field--title h2 {
+    margin:0;
+    padding:$block--heading-padding;
+    background: $block--heading-bgcolor;
+    color: $block--heading-text-color;
+    font-size: $block--heading-size;
+    @include gradient($nav--main--bgcolor, #500);
+    @include head-font();
+  }
+  .block__content,
+  .view-content {
+    padding: $block--padding;
+    color: $block--text-color;
+  }
+  .field--node-link a {
+    @include button();
+    font-size:.9em;
+    margin:.5em 0;
+    text-transform: lowercase;
+  }
+}
+
+@mixin head-font(){
+  font-family: "Michroma", arial, helvetica, sans-serif;
+}
+
+@mixin defaultGradient() {
+  @include gradient($nav--main--bgcolor, #500);
+}
+
+@mixin defaultGradientReversed() {
+  @include gradient(#500, $nav--main--bgcolor);
+}

@@ -1,0 +1,105 @@
+.l-region--sidebar-first {
+  display:none;
+}
+
+.l-content {
+  @include span(12 of 12);
+}
+
+.l-region--sidebar-second {
+  display:none;
+}
+
+.l-header {
+  .header--inside {
+    @include container();
+    .l-branding,
+    .l-region--header {
+      @include span(12);
+    }
+
+    .l-branding {
+      width:100%;
+      @include breakpoint($tablet) {
+        @include span(6 of 12 at 1);
+      }
+    }
+    .l-region--header {
+      width:100%;
+      @include breakpoint($tablet) {
+        @include span(6 at 7 of 12 last);
+        @include container();
+
+      }
+      .block--search {
+        display:block;
+
+        @include breakpoint($tablet) {
+          //@include span(6 at 1 first);
+        }
+      }
+      .block--header--social-icon {
+        display:block;
+      }
+    }
+  }
+}
+
+
+@include breakpoint($tablet) {
+
+  .l-region--navigation,
+  .l-region--navigation {
+    .block--menu-block {
+      @include container();
+    }
+  }
+  .block--superfish {
+    @include container();
+  }
+
+  .l-page {
+
+  }
+
+  .l-content {
+    @include container();
+  }
+  .l-main {
+    @include container();
+  }
+
+  .l-region--sidebar-first {
+    @include span(3 of 12 at 1 first);
+  }
+
+  .l-content {
+    @include span(7 of 12);
+  }
+
+  .l-region--sidebar-second {
+    @include span(2 of 12 at 11 last);
+  }
+
+  .l-region--sidebar-first,
+  .l-region--sidebar-second {
+    display:inline-block;
+  }
+
+
+  .l-region--footer {
+    @include container();
+  }
+}
+
+.panel-2col {
+  @include container();
+    .panel-panel {
+      display:block;
+      float:none;
+      @include breakpoint($tablet) {
+        @include gallery(6);
+      }
+    }
+  }
+

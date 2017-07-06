@@ -1,0 +1,39 @@
+.button--soundcloud a,
+.button--twitter a,
+.button--facebook a {
+  @include button();
+}
+
+.button--soundcloud {
+
+}
+
+.button--twitter {
+
+}
+
+.button--facebook {
+
+}
+
+.button {
+  @include button();
+}
+
+.button.booking-button {
+  @include button();
+
+  margin:0 auto 1em auto;
+  text-align: center;
+  line-height: 150%;
+  padding: 0.5em 0.5em 0.75em;
+  display: block;
+  width: 100%;
+  @include gradient($black, $dark-grey);
+    span {
+      font-size: 16px;
+    }
+  @incude breakpoint($tablet){
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,35 @@
+name = Sliced Note
+description = Please provide a description for your theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/slicednote.normalize.css
+stylesheets[all][] = css/slicednote.hacks.css
+stylesheets[all][] = css/slicednote.styles.css
+stylesheets[all][] = css/slicednote.no-query.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/slicednote.behaviors.js
+
+; ========================================
+; Regions
+; ========================================
+regions[header_left] = Header Left
+regions[header_right]   = Header Right
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer] = Footer
+regions[footer_box_1] = Footer First
+regions[footer_box_2] = Footer Second

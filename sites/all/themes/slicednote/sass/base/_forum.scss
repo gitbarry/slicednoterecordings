@@ -1,0 +1,129 @@
+.forum-table-wrap .forum-table-superheader,
+#forum-statistics-header {
+  @include defaultGradient();
+}
+
+.forum-table {
+  border: 1px solid $block--border-color;
+}
+
+#forum-statistics {
+  border:1px solid $block--border-color;
+
+  .forum-statistics-sub-header {
+    background: $darker-red;
+  }
+
+  .forum-statistics-sub-body {
+    background: transparent;
+  }
+
+  .forum-table-wrap thead tr {
+    background: transparent;
+    border:1px solid $block--border-color;
+  }
+}
+
+.forum-table-forums {
+  th {
+    @include defaultGradient();
+  }
+}
+
+.forum-table-wrap thead tr {
+  background-color: transparent;
+  border: none;
+}
+
+.forum-table tr.even, .forum-table tr.odd,
+tr.even,
+tr.odd {
+  background: transparent;
+}
+
+td.forum-last-reply {
+  font-size: $font--size-small;
+}
+
+div.forum-post {
+  border:1px solid $block--border-color;
+}
+
+.forum-post-info,
+.af-button-large, .af-button-small, .author-pane-link {
+  @include defaultGradient();
+  border:1px solid $button--border-color;
+    &:hover {
+      @include defaultGradientReversed();
+    }
+}
+
+.forum-post-info {
+  padding:.5em;
+    a.active {
+      color: #fff;
+    }
+}
+
+.forum-post-title {
+  border-bottom-color: $block--border-color;
+}
+
+.forum-post-wrapper {
+  background: transparent;
+
+}
+.forum-post-panel-main,
+.forum-post-footer,
+.div.forum-post {
+  background-color: transparent;
+  border-left: 1px solid $block--border-color;
+}
+.forum-post-footer {
+  border-top:1px solid $block--border-color;
+}
+
+/* Comments */
+.field-name-comment-body {
+  .form-actions {
+    input {
+      font-size: 1.5em;
+      margin:1em 0;
+    }
+  }
+}
+
+/* Post */
+
+.forum-post {
+  .author-pane {
+    .user-picture {
+      margin:.25em;
+    }
+  }
+}
+
+.forum-table-wrap .forum-table-superheader,
+.forum-table-topics thead tr,
+th {
+  background: transparent;
+  @include defaultGradient();
+  border-top: 1px solid $block--border-color;
+}
+
+.forum-table-topics {
+  .forum-table tr.even, .forum-table tr.odd {
+    border-top:1px solid $block--border-color;
+  }
+  td {
+    padding: 0.5em;
+  }
+}
+
+.comment-form.comment-form--2 {
+  display: none;
+}
+
+.edit-actions {
+  margin:1em 0;
+}

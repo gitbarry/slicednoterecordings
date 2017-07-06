@@ -1,0 +1,100 @@
+a {
+  color: $body--link-color;
+}
+.breadcrumb {
+  display:none;
+}
+.l-region--navigation {
+  @include menu();
+    a {
+      @include my-text-shadow($theme-color, '19px', '5px');
+    }
+}
+
+.block-side-menu,
+.block--menu-menu-releases {
+  @include sideMenu();
+  font-size: $font--size-small;
+}
+
+/* Overide Superfish Menu */
+.sf-menu.sf-style-coffee li, .sf-menu.sf-style-coffee.sf-navbar {
+  background: transparent;
+}
+.sf-menu.sf-style-coffee li.sf-depth-1 a.sf-depth-1,
+.sf-menu.sf-style-coffee li.sf-depth-1 a.sf-depth-2 {
+  color:white;
+  border:none;
+  @include head-font();
+  font-weight:normal;
+  &:hover {
+    background: #333;
+    transition-property: background;
+    transition-duration: 1s;
+  }
+}
+
+.sf-menu.sf-style-coffee li.sf-depth-1 a.sf-depth-2 {
+  font-family: $body--font-two;
+}
+
+.sf-menu.sf-style-coffee li:hover, .sf-menu.sf-style-coffee li.sfHover, .sf-menu.sf-style-coffee li.active a, .sf-menu.sf-style-coffee a:focus, .sf-menu.sf-style-coffee a:hover, .sf-menu.sf-style-coffee a:active, .sf-menu.sf-style-coffee.sf-navbar li li {
+  background: transparent;
+  .sf-menu.sf-style-coffee a {
+    border-top: none;
+    color: $nav--main--color;
+    font-weight:normal;
+    font-size: $nav--main-text-size;
+    border:none;
+    @include head-font();
+      &:hover {
+        background: #000;
+      }
+  }
+}
+
+.sf-menu.sf-style-coffee li.first .sf-menu.sf-style-coffee a {
+  border-left: none;
+  @include head-font();
+}
+
+/* Sub Menus */
+.sf-menu.sf-style-coffee li li li {
+  background: #29363F;
+    &:hover {
+      background: #29363F;
+    }
+}
+
+.tabs a {
+  color:black;
+}
+.responsive-menus.responsified span.toggler {
+  background: $black;
+}
+
+// Admin Links //
+.tabs.links--inline {
+  li {
+    display:block;
+    float:none;
+    width:100%;
+    margin-bottom:.5em;
+    @include breakpoint($tablet) {
+      display:inline;
+      float:left;
+      width:auto;
+      margin-bottom:0;
+    }
+    a {
+      font-size: .8em;
+      border:1px solid $button--border-color;
+      color: $button--text-color;
+      @include defaultGradient();
+        &:hover {
+          background: black;
+        }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+h1, h2, h3, h4, h5, h6 {
+  @include head-font();
+}
+
+header h1.site-name a {
+  color: $white;
+}
+
+.l-content h1 {
+  font-weight:normal;
+  margin:0 auto 1em;
+  text-align: center;
+  @include breakpoint($tablet) {
+    margin:0;
+    text-align: left;
+  }
+  @include breakpoint($desktop) {
+    font-size:2em;
+    line-height:1em;
+    margin-top:0;
+  }
+}
+
+.l-content .block--box h2 {
+  font-size:1em;
+  @include breakpoint($desktop) {
+    font-size:1.75em;
+  }
+}

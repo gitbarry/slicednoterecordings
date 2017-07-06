@@ -1,0 +1,50 @@
+input,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='file'],
+select,
+textarea,
+.email.form-text,
+.form-select
+.form-type-password-confirm input[type='text'],
+.form-type-password-confirm input[type='password'],
+.form-type-password-confirm input[type='email'] {
+  @include border-radius(3px);
+  border:1px solid $input--border-color;
+  padding: $input--padding;
+  background: $input--background-colour;
+  color: $light-grey;
+  max-width:100%;
+}
+input[type='submit'] {
+  @include button();
+}
+
+fieldset {
+  border:1px solid $fieldset--border-color;
+  margin:1em .5em;
+  max-width:100%;
+}
+
+.user-profile-form {
+  .form-submit {
+    margin-right:1em;
+  }
+}
+
+select.edit-timezone--2 {
+  max-width:50%;
+  @include breakpoint($tablet) {
+    max-width:100%;
+  }
+}
+
+.messages--status, .ok {
+  color: #fff;
+}
+
+.forum-table-wrap .forum-table-superheader, .forum-table-topics thead tr {
+  border-top: 1px solid $block--border-color;
+  @include defaultGradient();
+}

@@ -1,0 +1,43 @@
+input,
+password,
+email,
+textarea {
+  color: $input--text-color;
+}
+.contact-form {
+  input,
+  textarea {
+    width:100%;
+    color:#333;
+    border-bottom:2px solid #000;
+  }
+    input[type='submit'] {
+    color: $button--text-color;
+      border:none;
+  }
+}
+
+.webform-client-form {
+  .form-item {
+    width:95%;
+      input,
+    password,
+    textarea {
+        width:100%;
+      }
+  }
+  .webform-calendar {
+    max-width:30px;
+  }
+}
+
+.webform-calendar {
+  display:block;
+  min-width:40px;
+  margin:1em auto;
+    @include breakpoint($tablet) {
+      display:inline-block;
+      min-width:20px;
+      margin:0;
+    }
+}
